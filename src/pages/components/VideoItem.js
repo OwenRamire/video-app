@@ -1,6 +1,6 @@
 import './styles/videoItem.css';
 
-const VideoItem = ({ video }) => {
+const VideoItem = ({ video, handleVideoSelect }) => {
   const {
     snippet: { title, channelTitle, publishTime, thumbnails } 
   } = video;
@@ -14,7 +14,10 @@ const VideoItem = ({ video }) => {
 
 
   return (
-    <div className="video-item item">
+    <div
+      className="video-item item"
+      onClick={() => handleVideoSelect(video)}
+    >
       <img className="ui image" src={thumbnails.medium.url} alt={title} />
       <div className="content">
         <h4 className="video-title header">{title}</h4>
