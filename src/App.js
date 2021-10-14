@@ -1,8 +1,9 @@
 import { Component } from 'react';
+import Videos from './pages/Videos';
 
 class App extends Component{
   render() {
-    return <h1>Hello App component!!!</h1>;
+    return <Videos />;
   }
 }
 
